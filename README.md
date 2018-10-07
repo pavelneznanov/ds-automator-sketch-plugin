@@ -7,7 +7,9 @@
 Запуск через меню:
 
 `Plugins` > `DS Automator` > `Formatting pages`
+
 Горячая клавиша:
+
 `Cmd` + `Alt` + `Shift` + `P`
 
 ---
