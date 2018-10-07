@@ -14,5 +14,6 @@
 
 `Cmd` + `Alt` + `Shift` + `P`
 
+[tutorial-pages]: https://github.com/pavelneznanov/ds-automator-sketch-plugin/tree/master/tutorial/pages.gif "Formatting pages"
 ---
 Павел Незнанов | npi@bk.ru
