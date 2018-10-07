@@ -1,0 +1,22 @@
+{
+  "name": "DS Automator",
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "icon": "icon.png",
+  "description": "My First Sketch Plugin",
+  "authorEmail": "npi@bk.com",
+  "author": "Pavel Neznanov",
+  "commands": [
+    {
+      "script": "pages.js",
+      "handler": "pages",
+      "shortcut": "command alt shift p",
+      "name": "Pages",
+      "identifier": "ds-plugin-pages"
+    }
+  ],
+  "version": "0.1.0",
+  "identifier": "ds-automator-sketch-plugin",
+  "disableCocoaScriptPreprocessor": true,
+  "appcast": "https://raw.githubusercontent.com//master/.appcast.xml"
+}
