@@ -3,7 +3,7 @@
   "compatibleVersion": 3,
   "bundleVersion": 1,
   "icon": "icon.png",
-  "description" : "My First Sketch Plugin",
+  "description" : "Automation of design system layouts",
   "authorEmail" : "npi@bk.com",
   "author" : "Pavel Neznanov",
   "commands": [
@@ -11,7 +11,7 @@
       "script" : "./pages.js",
       "handler" : "pages",
       "shortcut" : "command alt shift p",
-      "name" : "Pages",
+      "name" : "Formatting pages",
       "identifier" : "ds-plugin-pages"
     }
   ]

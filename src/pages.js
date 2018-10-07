@@ -1,14 +1,10 @@
-import './message.js'
-
-var pages = function (context) {
+export function pages (context) {
   var doc = context.document;
-  // var pages = [doc pages];
-  var pages = doc.getLayers();
+  var pages = doc.pages();
+
   pages.sort(function(a, b) {
-    // var pageA = [a name];
-    // var pageB = [b name];
-    var pageA = a.getLayersNamed(name);
-    var pageB = b.getLayersNamed(name);
+    var pageA = a.name();
+    var pageB = b.name();
     if (pageA < pageB) {
       return -1;
     }
@@ -19,8 +15,7 @@ var pages = function (context) {
   });
 
   pages.forEach(function(page, i) {
-    // let pageName = [page name];
-    let pageName = page.getLayersNamed(name);
+    let pageName = page.name();
     let docRegex = /documentation/g;
     let comRegex = /components|Symbols/g;
     if (pageName.search(docRegex) != -1) {
@@ -38,8 +33,7 @@ var pages = function (context) {
   });
 
   pages.forEach(function(page, i) {
-    // let pageName = [page name];
-    let pageName = page.getLayersNamed(name);
+    let pageName = page.name();
     pageName = pageName.trim().replace(' ', '-');
     pageName = pageName.replace(/(_+)|(-+)/g, '-');
     pageName = pageName.replace(/-+/g, '-');
@@ -49,6 +43,5 @@ var pages = function (context) {
     }
   });
 
-  message(doc, 'Список страниц оформатирован');
+  doc.showMessage('All pages has been formatted.');
 }
-

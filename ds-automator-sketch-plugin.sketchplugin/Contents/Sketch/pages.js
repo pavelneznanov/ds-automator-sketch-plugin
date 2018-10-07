@@ -91,42 +91,22 @@ var exports =
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/message.js":
-/*!************************!*\
-  !*** ./src/message.js ***!
-  \************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function message(document, message) {
-  this.doc = document;
-  this.doc.showMessage(message);
-}
-
-/***/ }),
-
 /***/ "./src/pages.js":
 /*!**********************!*\
   !*** ./src/pages.js ***!
   \**********************/
-/*! no exports provided */
+/*! exports provided: pages */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _message_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./message.js */ "./src/message.js");
-/* harmony import */ var _message_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_message_js__WEBPACK_IMPORTED_MODULE_0__);
-
-
-var pages = function pages(context) {
-  var doc = context.document; // var pages = [doc pages];
-
-  var pages = doc.getLayers();
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pages", function() { return pages; });
+function pages(context) {
+  var doc = context.document;
+  var pages = doc.pages();
   pages.sort(function (a, b) {
-    // var pageA = [a name];
-    // var pageB = [b name];
-    var pageA = a.getLayersNamed(name);
-    var pageB = b.getLayersNamed(name);
+    var pageA = a.name();
+    var pageB = b.name();
 
     if (pageA < pageB) {
       return -1;
@@ -139,8 +119,7 @@ var pages = function pages(context) {
     return 0;
   });
   pages.forEach(function (page, i) {
-    // let pageName = [page name];
-    var pageName = page.getLayersNamed(name);
+    var pageName = page.name();
     var docRegex = /documentation/g;
     var comRegex = /components|Symbols/g;
 
@@ -161,8 +140,7 @@ var pages = function pages(context) {
     }
   });
   pages.forEach(function (page, i) {
-    // let pageName = [page name];
-    var pageName = page.getLayersNamed(name);
+    var pageName = page.name();
     pageName = pageName.trim().replace(' ', '-');
     pageName = pageName.replace(/(_+)|(-+)/g, '-');
     pageName = pageName.replace(/-+/g, '-');
@@ -172,8 +150,8 @@ var pages = function pages(context) {
       page.setName(i + '-' + pageName);
     }
   });
-  message(doc, 'Список страниц оформатирован');
-};
+  doc.showMessage('All pages has been formatted.');
+}
 
 /***/ })
 
