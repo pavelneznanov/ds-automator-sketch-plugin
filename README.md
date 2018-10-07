@@ -1,8 +1,8 @@
 # Design System Automator
 
-## Возможности
+### Возможности
 
-#### 1. Форматирование списка страниц
+#### Форматирование списка страниц
 
 При первом запуске команда удаляет спецсимволы и пробелы, сортирует страницы по алфавиту, добавляет нумерацию. Второй и последующие запуски форматируют новые страницы, добавляя им номер и размещая в конце существующего списка.
 
@@ -14,6 +14,10 @@
 
 `Cmd` + `Alt` + `Shift` + `P`
 
-[tutorial-pages]: https://github.com/pavelneznanov/ds-automator-sketch-plugin/tree/master/tutorial/pages.gif "Formatting pages"
+<p>
+  <img width="600" height="450" src="https://github.com/pavelneznanov/ds-automator-sketch-plugin/blob/master/tutorial/pages.gif">
+</p>
+
 ---
+
 Павел Незнанов | npi@bk.ru
