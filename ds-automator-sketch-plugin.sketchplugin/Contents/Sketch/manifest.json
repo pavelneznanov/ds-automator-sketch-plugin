@@ -15,7 +15,7 @@
       "identifier": "ds-plugin-pages"
     }
   ],
-  "version": "1.0.0",
+  "version": "1.0.2",
   "identifier": "ds-automator-sketch-plugin",
   "disableCocoaScriptPreprocessor": true,
   "appcast": "https://raw.githubusercontent.com/pavelneznanov/ds-automator-sketch-plugin/master/.appcast.xml"
