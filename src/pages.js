@@ -13,7 +13,7 @@ export function pages (context) {
     }
   });
   if (checkCyrillic) {
-    UI.alert('Внимание!', 'Названия страниц не должны содержать кириллические символы.');
+    UI.alert('Attention!', 'Page names should not contain Cyrillic characters');
   } else {
 
     pages.sort(function(a, b) {
@@ -58,6 +58,6 @@ export function pages (context) {
         page.setName(i+1 + '-' + pageName);
       }
     });
-    doc.showMessage('All pages has been formatted.');
+    doc.showMessage('All pages has been formatted');
   }
 }

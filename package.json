@@ -1,7 +1,7 @@
 {
   "name": "DS Automator",
   "version": "1.0.0",
-  "description": "Плагин предназначен для автоматизации работы дизайнеров, в рамках существующих требований к оформлению дизайн-макетов.",
+  "description": "Tools for automating designer work",
   "author": "Pavel Neznanov",
   "icon": "./icon.png",
   "repository": {
