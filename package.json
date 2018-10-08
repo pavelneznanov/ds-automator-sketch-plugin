@@ -1,6 +1,13 @@
 {
   "name": "ds-automator-sketch-plugin",
   "version": "0.1.0",
+  "description": "Плагин предназначен для автоматизации работы дизайнеров, в рамках существующих требований к оформлению дизайн-макетов.",
+  "author": "Pavel Neznanov",
+  "icon" : "./icon.png",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pavelneznanov/ds-automator-sketch-plugin.git"
+  },
   "engines": {
     "sketch": ">=3.0"
   },
@@ -20,5 +27,6 @@
   },
   "devDependencies": {
     "@skpm/builder": "^0.5.2"
-  }
+  },
+  "dependencies": {}
 }
