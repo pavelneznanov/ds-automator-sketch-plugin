@@ -2,7 +2,7 @@
   "name" : "DS Automator",
   "compatibleVersion": 3,
   "bundleVersion": 1,
-  "icon": "icon.png",
+  "icon": "./icon.png",
   "description" : "Automation of design system layouts",
   "authorEmail" : "npi@bk.com",
   "author" : "Pavel Neznanov",
@@ -13,6 +13,13 @@
       "shortcut" : "command alt shift p",
       "name" : "Formatting pages",
       "identifier" : "ds-plugin-pages"
+    },
+    {
+      "script" : "./clean-pages.js",
+      "handler" : "cleanPages",
+      "shortcut" : "command alt shift c",
+      "name" : "Clear page numbers",
+      "identifier" : "ds-plugin-clean-pages"
     }
   ]
 }
