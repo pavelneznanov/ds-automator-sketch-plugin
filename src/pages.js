@@ -16,8 +16,8 @@ export function pages (context) {
     ui.alert('Attention!', 'Page names should not contain Cyrillic characters');
   } else {
     pages.sort(function(a, b) {
-      let pageA = a.name();
-      let pageB = b.name();
+      let pageA = a.name().toLowerCase();
+      let pageB = b.name().toLowerCase();
       let numberFilter = /(\d+)-([a-zA-Zа-яА-Я]+|\d+)-*/g;
       if (pageA.search(numberFilter) == -1 || pageB.search(numberFilter) == -1) {
         if (pageA < pageB) {
@@ -29,7 +29,7 @@ export function pages (context) {
         return 0;
       }
     });
-    
+
     pages.forEach(function(page, i) {
       let pageName = page.name();
       let docRegex = /documentation/g;

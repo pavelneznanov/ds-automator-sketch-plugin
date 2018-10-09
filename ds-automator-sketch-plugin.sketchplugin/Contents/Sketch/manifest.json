@@ -12,10 +12,21 @@
       "handler": "pages",
       "shortcut": "command alt shift p",
       "name": "Formatting pages",
-      "identifier": "ds-plugin-pages"
+      "identifier": "ds-plugin-pages",
+      "icon": "./icons/icon-sr.png",
+      "description": "Sort and format the page list"
+    },
+    {
+      "script": "clean-pages.js",
+      "handler": "cleanPages",
+      "shortcut": "command alt shift c",
+      "name": "Clear page numbers",
+      "identifier": "ds-plugin-clean-pages",
+      "icon": "./icons/icon-sr.png",
+      "description": "Removing prefixes in page titles"
     }
   ],
-  "version": "1.0.2",
+  "version": "1.0.5",
   "identifier": "ds-automator-sketch-plugin",
   "disableCocoaScriptPreprocessor": true,
   "appcast": "https://raw.githubusercontent.com/pavelneznanov/ds-automator-sketch-plugin/master/.appcast.xml"

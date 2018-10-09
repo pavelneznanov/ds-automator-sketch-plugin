@@ -86,22 +86,22 @@ var exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/pages.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/clean-pages.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/pages.js":
-/*!**********************!*\
-  !*** ./src/pages.js ***!
-  \**********************/
-/*! exports provided: pages */
+/***/ "./src/clean-pages.js":
+/*!****************************!*\
+  !*** ./src/clean-pages.js ***!
+  \****************************/
+/*! exports provided: cleanPages */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pages", function() { return pages; });
-function pages(context) {
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cleanPages", function() { return cleanPages; });
+function cleanPages(context) {
   var doc = context.document;
   var pages = doc.pages();
   var selection = context.selection;
@@ -121,56 +121,12 @@ function pages(context) {
   if (checkCyrillic) {
     ui.alert('Attention!', 'Page names should not contain Cyrillic characters');
   } else {
-    pages.sort(function (a, b) {
-      var pageA = a.name().toLowerCase();
-      var pageB = b.name().toLowerCase();
-      var numberFilter = /(\d+)-([a-zA-Zа-яА-Я]+|\d+)-*/g;
-
-      if (pageA.search(numberFilter) == -1 || pageB.search(numberFilter) == -1) {
-        if (pageA < pageB) {
-          return -1;
-        }
-
-        if (pageA > pageB) {
-          return 1;
-        }
-
-        return 0;
-      }
-    });
-    pages.forEach(function (page, i) {
+    pages.forEach(function (page) {
       var pageName = page.name();
-      var docRegex = /documentation/g;
-      var comRegex = /components|Symbols/g;
-
-      if (pageName !== '1-components') {
-        // if (pageName.search(docRegex) != -1) {
-        //   let pageMemo = page;
-        //   pageMemo.setName('2-documentation');
-        //   pages.splice(i, 1);
-        //   pages.splice(0, 0, pageMemo);
-        // }
-        if (pageName.search(comRegex) != -1) {
-          var pageMemo = pages[i];
-          pageMemo.setName('1-components');
-          pages.splice(i, 1);
-          pages.unshift(pageMemo);
-        }
-      }
+      pageName = pageName.replace(/[\d]+\-+/, '');
+      page.setName(pageName);
     });
-    pages.forEach(function (page, i) {
-      var pageName = page.name();
-      pageName = pageName.trim().replace(' ', '-');
-      pageName = pageName.replace(/(_+)|(-)|(\s)/g, '-');
-      pageName = pageName.replace(/-+/g, '-');
-      pageName = pageName.toLowerCase();
-      var numberFilter = /(\d+)-([a-zA-Zа-яА-Я]+|\d+)-*/g;
-
-      if (pageName.search(numberFilter) == -1) {
-        page.setName(i + 1 + '-' + pageName);
-      }
-    });
-    doc.showMessage('All pages has been formatted');
+    doc.showMessage('All page numbers are deleted');
   }
 }
 
@@ -194,7 +150,7 @@ module.exports = require("sketch/ui");
     exports[key](context);
   }
 }
-that['pages'] = __skpm_run.bind(this, 'pages');
+that['cleanPages'] = __skpm_run.bind(this, 'cleanPages');
 that['onRun'] = __skpm_run.bind(this, 'default')
 
-//# sourceMappingURL=pages.js.map
+//# sourceMappingURL=clean-pages.js.map

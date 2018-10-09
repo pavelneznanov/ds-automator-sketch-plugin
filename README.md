@@ -15,12 +15,24 @@
 `Cmd` + `Alt` + `Shift` + `P`
 
 <p>
-  <img width="600" height="450" src="https://github.com/pavelneznanov/ds-automator-sketch-plugin/blob/master/tutorial/pages.gif">
+  <img width="600" height="450" src="https://github.com/pavelneznanov/ds-automator-sketch-plugin/blob/master/tutorial/formatting-pages.gif">
 </p>
 
-<a href="http://bit.ly/SketchRunnerWebsite">
-  <img height="40" src="http://bit.ly/RunnerBadgeBlue">
-</a>
+#### Удаление номеров у страниц
+
+Команда удаляет номера у всех странц, подходящих под шаблон «N-XXXXXXX».
+
+Запуск через меню:
+
+`Plugins` > `DS Automator` > `Clear page numbers`
+
+Горячая клавиша:
+
+`Cmd` + `Alt` + `Shift` + `С`
+
+<p>
+  <img width="600" height="450" src="https://github.com/pavelneznanov/ds-automator-sketch-plugin/blob/master/tutorial/clean-pages.gif">
+</p>
 
 ---
 
