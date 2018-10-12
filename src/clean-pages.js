@@ -1,4 +1,4 @@
-export function cleanPages (context) {
+export function cleanCurrentArtboards (context) {
   var doc = context.document;
   var pages = doc.pages();
   var selection = context.selection;

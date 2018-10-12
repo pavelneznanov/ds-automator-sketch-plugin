@@ -24,6 +24,24 @@
       "identifier" : "ds-plugin-clean-pages",
       "icon" : "./icons/icon-sr.png",
       "description" : "Removing prefixes in page titles"
+    },
+    {
+      "script" : "./clean-current-artboards.js",
+      "handler" : "cleanCurrentArtboards",
+      "shortcut" : "command alt shift a",
+      "name" : "Clear current artboards",
+      "identifier" : "ds-plugin-clean-current-artboards",
+      "icon" : "./icons/icon-sr.png",
+      "description" : "Removing prefixes in artboards titles"
     }
-  ]
+  ],
+  "menu" : {
+    "items" : [
+        "ds-plugin-pages",
+        "ds-plugin-clean-pages",
+        "-",
+        "ds-plugin-clean-current-artboards"
+    ],
+    "title" : "DS Automator"
+  }
 }
