@@ -86,60 +86,40 @@ var exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/clean-pages.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/artboards.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/clean-pages.js":
-/*!****************************!*\
-  !*** ./src/clean-pages.js ***!
-  \****************************/
-/*! exports provided: cleanPages */
+/***/ "./src/artboards.js":
+/*!**************************!*\
+  !*** ./src/artboards.js ***!
+  \**************************/
+/*! exports provided: artboards */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cleanPages", function() { return cleanPages; });
-function cleanPages(context) {
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "artboards", function() { return artboards; });
+function artboards(context) {
   var doc = context.document;
   var pages = doc.pages();
-  var selection = context.selection;
-
-  var ui = __webpack_require__(/*! sketch/ui */ "sketch/ui");
-
-  var checkCyrillic;
   pages.forEach(function (page) {
-    var pageName = page.name();
-    var cyrillicRegex = /[а-яА-Я]/g;
-
-    if (pageName.search(cyrillicRegex) != -1) {
-      checkCyrillic = true;
-    }
-  });
-
-  if (checkCyrillic) {
-    ui.alert('Attention!', 'Page names should not contain Cyrillic characters');
-  } else {
-    pages.forEach(function (page) {
-      var pageName = page.name();
-      pageName = pageName.replace(/^[\d]+\-+/, '');
-      page.setName(pageName);
+    //console.log(page);
+    //console.log(page.name());
+    //console.log(page.artboards());
+    var artboardList = page.artboards();
+    artboardList.forEach(function (artboard) {
+      console.log(artboard.name());
+      var artboardName = artboard.name();
+      artboardName = artboardName.replace(/([\s]+|[_]+|[-]+)+/g, '-').toLowerCase();
+      artboard.setName(artboardName);
+      console.log(artboard.name());
     });
-    doc.showMessage('All page numbers are deleted');
-  }
+  });
+  doc.showMessage('All artboards renamed');
 }
-
-/***/ }),
-
-/***/ "sketch/ui":
-/*!****************************!*\
-  !*** external "sketch/ui" ***!
-  \****************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("sketch/ui");
+; // artboards(context);
 
 /***/ })
 
@@ -150,7 +130,7 @@ module.exports = require("sketch/ui");
     exports[key](context);
   }
 }
-that['cleanPages'] = __skpm_run.bind(this, 'cleanPages');
+that['artboards'] = __skpm_run.bind(this, 'artboards');
 that['onRun'] = __skpm_run.bind(this, 'default')
 
-//# sourceMappingURL=clean-pages.js.map
+//# sourceMappingURL=artboards.js.map

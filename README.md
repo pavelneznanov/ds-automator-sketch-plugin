@@ -36,4 +36,4 @@
 
 ---
 
-Павел Незнанов | npi@bk.ru
+Pavel Neznanov | npi@bk.ru

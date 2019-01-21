@@ -11,7 +11,7 @@
       "script" : "./pages.js",
       "handler" : "pages",
       "shortcut" : "command alt shift p",
-      "name" : "Formatting pages",
+      "name" : "Format pages",
       "identifier" : "ds-plugin-pages",
       "icon" : "./icons/icon-sr.png",
       "description" : "Sort and format the page list"
@@ -24,6 +24,13 @@
       "identifier" : "ds-plugin-clean-pages",
       "icon" : "./icons/icon-sr.png",
       "description" : "Removing prefixes in page titles"
+    },
+    {
+      "script" : "./artboards.js",
+      "handler" : "artboards",
+      "name" : "Format artboard titles",
+      "identifier" : "ds-plugin-artboards",
+      "description" : "Format artboard titles in document"
     }
   ]
 }

@@ -144,12 +144,6 @@ function pages(context) {
       var comRegex = /components|Symbols/g;
 
       if (pageName !== '1-components') {
-        // if (pageName.search(docRegex) != -1) {
-        //   let pageMemo = page;
-        //   pageMemo.setName('2-documentation');
-        //   pages.splice(i, 1);
-        //   pages.splice(0, 0, pageMemo);
-        // }
         if (pageName.search(comRegex) != -1) {
           var pageMemo = pages[i];
           pageMemo.setName('1-components');

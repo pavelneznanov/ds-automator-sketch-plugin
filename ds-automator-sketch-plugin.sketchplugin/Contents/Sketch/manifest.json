@@ -11,7 +11,7 @@
       "script": "pages.js",
       "handler": "pages",
       "shortcut": "command alt shift p",
-      "name": "Formatting pages",
+      "name": "Format pages",
       "identifier": "ds-plugin-pages",
       "icon": "./icons/icon-sr.png",
       "description": "Sort and format the page list"
@@ -24,9 +24,16 @@
       "identifier": "ds-plugin-clean-pages",
       "icon": "./icons/icon-sr.png",
       "description": "Removing prefixes in page titles"
+    },
+    {
+      "script": "artboards.js",
+      "handler": "artboards",
+      "name": "Format artboard titles",
+      "identifier": "ds-plugin-artboards",
+      "description": "Format artboard titles in document"
     }
   ],
-  "version": "1.0.5",
+  "version": "1.1.0",
   "identifier": "ds-automator-sketch-plugin",
   "disableCocoaScriptPreprocessor": true,
   "appcast": "https://raw.githubusercontent.com/pavelneznanov/ds-automator-sketch-plugin/master/.appcast.xml"
