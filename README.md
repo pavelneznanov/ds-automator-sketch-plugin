@@ -34,6 +34,18 @@
   <img width="600" height="450" src="https://github.com/pavelneznanov/ds-automator-sketch-plugin/blob/master/tutorial/clean-pages.gif">
 </p>
 
+#### Форматирование названий артбордов и символов
+
+Очищает названия от «мусорных» символов, пробелов и надписей «Сopy N».
+
+Запуск через меню:
+
+`Plugins` > `DS Automator` > `Format artboard titles`
+
+<p>
+  <img width="600" height="450" src="https://github.com/pavelneznanov/ds-automator-sketch-plugin/blob/master/tutorial/formatting-artboards.gif">
+</p>
+
 ---
 
 Pavel Neznanov | npi@bk.ru
