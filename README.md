@@ -1,16 +1,29 @@
 # Design System Automator
 
-### Возможности
+## Installation
 
-#### Форматирование списка страниц
+#### Automatic
 
-При первом запуске команда удаляет спецсимволы и пробелы, сортирует страницы по алфавиту, добавляет нумерацию. Второй и последующие запуски форматируют новые страницы, добавляя им номер и размещая в конце существующего списка.
+Search for «Design System Automator» in [Sketch Runner](http://sketchrunner.com/).
+Once installed, Sketch will automatically notify you when an update is available.
 
-Запуск через меню:
+#### Manual
+
+1. Download and open «ds-automator-sketch-plugin-master.zip»
+2. Double click to «ds-automator-sketch-plugin.sketchplugin» for install.
+3. Done!
+
+## Usage
+
+#### Format pages
+
+At the first start, the command deletes special characters and spaces, sorts the pages alphabetically, adds numbering. The second and subsequent launches format new pages by adding a number to them and placing them at the end of the list.
+
+In the Sketch menu:
 
 `Plugins` > `DS Automator` > `Formatting pages`
 
-Горячая клавиша:
+Shortcut key:
 
 `Cmd` + `Alt` + `Shift` + `P`
 
@@ -18,15 +31,15 @@
   <img width="600" height="450" src="https://github.com/pavelneznanov/ds-automator-sketch-plugin/blob/master/tutorial/formatting-pages.gif">
 </p>
 
-#### Удаление номеров у страниц
+#### Removing prefixes in page titles
 
-Команда удаляет номера у всех странц, подходящих под шаблон «N-XXXXXXX».
+The command deletes numbers from all pages matching the «N-XXXXXXX» template.
 
-Запуск через меню:
+In the Sketch menu:
 
 `Plugins` > `DS Automator` > `Clear page numbers`
 
-Горячая клавиша:
+Shortcut key:
 
 `Cmd` + `Alt` + `Shift` + `С`
 
@@ -34,11 +47,11 @@
   <img width="600" height="450" src="https://github.com/pavelneznanov/ds-automator-sketch-plugin/blob/master/tutorial/clean-pages.gif">
 </p>
 
-#### Форматирование названий артбордов и символов
+#### Formatting artboard names and symbols
 
-Очищает названия от «мусорных» символов, пробелов и надписей «Сopy N».
+Clears titles from «rubbish» characters, spaces, and «Copy N» labels.
 
-Запуск через меню:
+In the Sketch menu:
 
 `Plugins` > `DS Automator` > `Format artboard titles`
 
