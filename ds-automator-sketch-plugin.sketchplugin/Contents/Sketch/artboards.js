@@ -114,7 +114,7 @@ function artboards(context) {
       //console.log(artboard.name());
       var artboardName = artboard.name();
 
-      if (artboardName.match(/[\s]|[\.]|[\\]|[_]|\w*copy\w*|-{2}/g)) {
+      if (artboardName.match(/[A-Z]|[\s]|[\.]|[\\]|[_]|\w*copy\w*|-{2}/g)) {
         artboardName = artboardName.toLowerCase().trim().replace(/(\\+)|(\.+)|\s+\b(\w*copy\w*)|\s+\d+\b/g, '');
         artboardName = artboardName.trim().replace(/([\s]+|[_]+|[-]+)+/g, '-');
         artboard.setName(artboardName);

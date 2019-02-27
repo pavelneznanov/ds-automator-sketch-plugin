@@ -3,7 +3,7 @@
   "compatibleVersion": 3,
   "bundleVersion": 1,
   "icon": "./icon.png",
-  "description" : "Automation of design system layouts",
+  "description" : "Fast namespaces formatting",
   "authorEmail" : "npi@bk.com",
   "author" : "Pavel Neznanov",
   "commands": [
